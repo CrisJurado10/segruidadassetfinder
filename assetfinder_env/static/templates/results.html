@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results for {{ domain }}</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Results for {{ domain }}</h1>
+    <ul>
+        {% for asset in assets %}
+            <li>{{ asset.name }} ({{ asset.category }}) - Value: {{ asset.value }} - <a href="{{ asset.url }}">{{ asset.url }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Search</a>
+</body>
+</html>
